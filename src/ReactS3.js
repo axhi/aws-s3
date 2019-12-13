@@ -44,9 +44,9 @@ class S3FileUpload {
         if (!data.ok) return Promise.reject(data);
         return Promise.resolve({
             bucket: config.bucketName,
-            key: `${config.dirName ? config.dirName + "/" : ""}${file.name}`,
+            key: `${config.dirName ? config.dirName + "/" : ""}${fileConfig.name}`,
             location: `${url}${config.dirName ? config.dirName + "/" : ""}${
-                file.name
+                fileConfig.name
                 }`,
             result: data
         });
